@@ -70,21 +70,21 @@ body {
     }
 }
 
-.decription-header {
+.description-header {
     margin-bottom: 33px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 32px;
     font-weight: bold;
     color: #4aaaa5;
 }
 
-.decription-content {
+.description-content {
     padding: 30px;
     margin-top: 32px;
     background-color: #fff;
 }
 
-.decription-content > p {
+.description-content > p {
     padding-top: 20px;
     font-size: 16px;
     line-height: 30px;
