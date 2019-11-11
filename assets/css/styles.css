@@ -104,6 +104,7 @@ body {
 }
 
 #imageNav-area {
+    display: flex;
     width: 100%;
     padding: 30px 30px 43px;
     margin-top: 32px;
