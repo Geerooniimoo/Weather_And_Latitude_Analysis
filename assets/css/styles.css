@@ -174,4 +174,22 @@ body {
     width: 100%;
 }
 
+.container {
+display: grid;
+/* overflow: hidden; */
+grid-gap: 4%;
+height: 60vh;
+grid-template-areas: "mainDash sideDash";
+grid-template-columns: 2fr 1fr;
+grid-template-rows: 60vh;
+}
 
+.mainDash {
+    overflow: hidden;
+    grid-area: mainDash;
+}
+
+.sideDash {
+    overflow: hidden;
+    grid-area: sideDash;
+}
