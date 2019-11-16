@@ -95,14 +95,6 @@ body {
     margin-right: 20px;
 }
 
-#imageNav-area {
-    display: flex;
-    width: 100%;
-    padding: 30px 30px 43px;
-    margin-top: 32px;
-    background-color: #fff;
-}
-
 .imageNav-header {
     margin-bottom: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -208,4 +200,12 @@ grid-template-columns: 2fr 1fr;
 
 .navbar-default .navbar-nav>li>a:hover {
     color: white;
+}
+
+#imageNav-area {
+    display: flex;
+    width: 100%;
+    height: 370px;
+    margin-top: 32px;
+    background-color: #fff;
 }
