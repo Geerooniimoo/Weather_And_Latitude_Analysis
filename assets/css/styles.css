@@ -153,6 +153,20 @@ body {
     background-color: #4aaaa5;
 }
 
+.comImgDiv {
+display: grid;
+grid-gap: 4%;
+grid-template-areas: "comLeft comRight";
+}
+
+.comLeft {
+    text-align: center;
+}
+
+.comRight {
+    text-align: center;
+}
+
 .img-responsive {
     width: 100%;
 }
