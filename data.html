@@ -6,56 +6,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
+       <!-- Bootstrap -->
+       <link rel="stylesheet" href="./assets/css/bootstrap.min.css" media="screen">
+       <link rel="stylesheet" href="./assets/css/styles.css" media="screen">
+       <title>Bootstrap Visualization Dashboard</title>
+   </head>
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid navbar-custom">
-
             <div class="row">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed"
                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <div class="col-xs-9 phone-nav">
-                        <a class="navbar-brand" href="index.html" id="logo">Lattitude</a>
+                    <div class="col-xs-9 phone-nab">
+                        <a class="navbar-brand" href="./index.html" id="logo">Latitude</a>
                     </div>
                 </div>
-
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right navbar-right-custom">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="visualizations/temp.html">Max Temperature</a></li>
-                                <li><a href="visualizations/humidity.html">Humidity</a></li>
-                                <li><a href="visualizations/cloudiness.html">Cloudiness</a></li>
-                                <li><a href="visualizations/wind.html">Wind Speed</a></li>
+                                <li><a href="./visualizations/temp.html">Max Temperature</a></li>
+                                <li><a href="./visualizations/humidity.html">Humidity</a></li>
+                                <li><a href="./visualizations/cloudiness.html">Cloudiness</a></li>
+                                <li><a href="./visualizations/wind.html">Wind Speed</a></li>
                             </ul>
                         </li>
-                        <li><a href="comparison.html">Comparison</a></li>
-                        <li><a href="data.html">Data</a></li>
+                        <li><a href="./comparison.html">Comparison</a></li>
+                        <li><a href="./data.html">Data</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <article class="description-content row">
-            <div class="col-xs-12">
+
+    <div class="dataDiv">
+        <article class="description-content">
                 <h1 class="description-header">Data</h1>
                 <hr class="description-hr" />
                 <p class="description-text">The following table includes all of the data used for plotting during this
                     project.</p>
-                <table border="1" class="dataframe table table-striped table-hover">
+                <table class="dataframe table table-striped table-hover">
                     <thead>
                         <tr style="text-align: right;">
                             <th>City_ID</th>
@@ -6637,7 +6635,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
         </article>
     </div>
 

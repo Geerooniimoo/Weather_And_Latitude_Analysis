@@ -70,6 +70,10 @@ body {
     color: #4aaaa5;
 }
 
+.comHeader {
+    padding: 30px 0 0 20px;
+}
+
 .description-content {
     padding: 30px;
     margin-top: 32px;
@@ -81,6 +85,7 @@ body {
     font-size: 16px;
     line-height: 30px;
     color: slategray;
+    text-align: justify;
 }
 
 .description-text {
@@ -104,7 +109,7 @@ body {
 }
 
 .imageNav-photo {
-    width: 45%;
+    width: 49%;
 }
 
 .imageNav-photo:hover {
@@ -155,7 +160,6 @@ body {
 
 .comImgDiv {
 display: grid;
-grid-gap: 4%;
 grid-template-areas: "comLeft comRight";
 }
 
@@ -173,6 +177,9 @@ grid-template-areas: "comLeft comRight";
 
 .whiteDiv {
     background-color: #fff;
+    padding-bottom: 60px;
+    width: 90%;
+    margin: auto;
 }
 
 .container {
@@ -186,6 +193,11 @@ grid-template-columns: 2fr 1fr;
     overflow: hidden;
     grid-area: mainDash;
     box-shadow: 2px 2px 20px #000;
+}
+
+.dataDiv {
+    width: 80%;
+    margin: auto;
 }
 
 .comparisonDiv {
