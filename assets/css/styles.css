@@ -33,29 +33,24 @@ body {
 }
 
 @media only screen and (max-with: 767px) {
-
     body {
         background-color: #fff;
     }
-
     .navbar-header {
         background-color: #4aaaa5;
     }
-
     #logo {
         width: 100%;
         height: 60px;
         padding-top: 20px;
         padding-bottom: 5px;
         margin-left: 0;
-        font-family: Georgia, Times,
-         'Times New Roman', serif;
+        font-family: Georgia, Times, 'Times New Roman', serif;
         font-size: 24px;
         font-weight: bold;
         color: #fff;
         background-color: #4aaaa5;
     }
-    
     .decription-content {
         padding: 0;
         margin-top: 0;
@@ -78,9 +73,10 @@ body {
     padding: 30px;
     margin-top: 32px;
     background-color: #fff;
+    width: fit-content;
 }
 
-.description-content > p {
+.description-content>p {
     padding-top: 20px;
     font-size: 16px;
     line-height: 30px;
@@ -159,8 +155,8 @@ body {
 }
 
 .comImgDiv {
-display: grid;
-grid-template-areas: "comLeft comRight";
+    display: grid;
+    grid-template-areas: "comLeft comRight";
 }
 
 .comLeft {
@@ -183,10 +179,10 @@ grid-template-areas: "comLeft comRight";
 }
 
 .container {
-display: grid;
-grid-gap: 4%;
-grid-template-areas: "mainDash sideDash";
-grid-template-columns: 2fr 1fr;
+    display: grid;
+    grid-gap: 4%;
+    grid-template-areas: "mainDash sideDash";
+    grid-template-columns: 2fr 1fr;
 }
 
 .mainDash {
@@ -245,4 +241,40 @@ grid-template-columns: 2fr 1fr;
     height: 370px;
     margin-top: 32px;
     background-color: #fff;
+}
+.description-content {
+    padding: 0px;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-gap: 1%;
+        grid-template-areas: "sideDash" "mainDash";
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+    }
+    .description-content {
+        padding: 0px;
+    }
+    #logo {
+        margin-left: 0;
+    }
+    .col-xs-9 {
+        padding-left: 0px;
+    }
+    #imageNav-area {
+        margin-top: 0px;
+    }
+
+    .sideDash {
+        overflow: scroll;
+    }
+    .sideDash::-webkit-scrollbar {
+        display: none;
+    }
+    table {
+        display: flex       ;
+    }
 }
