@@ -1,3 +1,7 @@
+* {
+    /* border: 2px solid red; */
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -7,6 +11,73 @@ body {
     margin-bottom: 150px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     background-color: #618292c9;
+    margin: 0 0 150px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 10px 0 0;
+    background-color: #05415d;
+    border: none;
+    box-shadow: 2px 2px 10px #000;
+
+}
+
+nav>a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 30px;
+    background: black;
+    margin: 0;
+    /* border-radius: 8px; */
+    font-size: 1.85rem;
+    font-weight: 900;
+    letter-spacing: .2rem;
+}
+
+nav button {
+    background: none;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+}
+
+nav div {
+    display: flex;
+}
+
+nav div a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+#plots div {
+    top: 60px;
+    right: 150px;
+    background: #05415d;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    transform: scale(0);
+    opacity: .85;
+}
+
+#plots>button:focus+div, #plots div:hover {
+    display: block;
+    -webkit-transition: transform .25s linear;
+    -moz-transition: transform .25s linear;
+    -ms-transition: transform .25s linear;
+    -o-transition: transform .25s linear;
+    transition: transform .25s linear;
+    transform: scale(1);
 }
 
 #logo {
@@ -26,20 +97,15 @@ body {
     opacity: 0.7;
 }
 
-.navbar-right-custom {
-    padding-top: 6px;
-    padding-right: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-}
-
 @media only screen and (max-with: 767px) {
     body {
         background-color: #fff;
     }
+
     .navbar-header {
         background-color: #4aaaa5;
     }
+
     #logo {
         width: 100%;
         height: 60px;
@@ -52,74 +118,79 @@ body {
         color: #fff;
         background-color: #4aaaa5;
     }
+
     .decription-content {
         padding: 0;
         margin-top: 0;
     }
 }
 
-.description-header {
-    margin-bottom: 33px;
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    font-size: 32px;
-    font-weight: bold;
-    color: #4aaaa5;
-}
-
 .comHeader {
     padding: 30px 0 0 20px;
 }
 
-.description-content {
-    padding: 30px;
+#mainDash {
+    width: 60%;
+    padding: 10px;
     margin-top: 32px;
     background-color: #fff;
-    width: fit-content;
+    box-shadow: 2px 2px 20px #000;
+    margin-bottom: 33px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4aaaa5;
 }
 
-.description-content>p {
+#mainDash img {
+    float: left;
+}
+
+#mainDash>p {
     padding-top: 20px;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 30px;
     color: slategray;
     text-align: justify;
 }
 
-.description-text {
-    padding-bottom: 20px;
-}
-
-#description-image {
-    float: left;
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-
-.imageNav-header {
-    margin-bottom: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
+#sideDash {
+    width: 35%;
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px #000;
+    margin-bottom: 33px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.7rem;
     font-weight: bold;
     color: #4aaaa5;
 }
 
-.imageNav-photo {
-    width: 49%;
-}
-
-.imageNav-photo:hover {
-    opacity: 0.6;
-}
-
-.imageNav-photo:active {
-    border: 2px solid #4aaaa5;
+#sideDash hr {
+    width: 95%;
 }
 
 #images {
-    padding-top: 15px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#images a {
+    width: 48%;
+    border: 4px solid transparent;
+}
+
+#images a img {
+    width: 100%;
+}
+
+#images a:hover {
+    border: 4px solid red;
 }
 
 .comparison-image:hover {
@@ -155,35 +226,11 @@ body {
     background-color: #4aaaa5;
 }
 
-.comImgDiv {
-    display: grid;
-    grid-template-areas: "comLeft comRight";
-}
-
-.comLeft {
-    text-align: center;
-}
-
-.comRight {
-    text-align: center;
-}
-
-.img-responsive {
-    width: 100%;
-}
-
-.whiteDiv {
-    background-color: #fff;
-    padding-bottom: 60px;
-    width: 90%;
-    margin: auto;
-}
-
-.container {
-    display: grid;
-    grid-gap: 4%;
-    grid-template-areas: "mainDash sideDash";
-    grid-template-columns: 2fr 1fr;
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .dataDiv {
@@ -191,7 +238,7 @@ body {
     margin: auto;
     background-color: white;
     padding: 1px 10px;
-    border-radius: 12px;  
+    border-radius: 12px;
     border: 2px solid black;
     box-shadow: 2px 10px 10px black;
 }
@@ -208,87 +255,9 @@ thead {
     margin-top: 5%;
 }
 
-.sideDash {
-    display: flex;
-    overflow: hidden;
-    grid-area: sideDash;
-    box-shadow: 2px 2px 10px #000;
-    height: 40vh;
-}
-
-.imageNav-content {
-    background-color: #fff;
-    padding: 10px;
-}
-
-.sideInnerDiv {
-    width: 100%;
-}
-
-.navbar {
-    background-color: #05415d;
-    border: none;
-    box-shadow: 2px 2px 10px #000;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: white;
-    font-size: 1.5rem;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
-    color: white;
-}
-
-#imageNav-area {
-    display: flex;
-    width: 100%;
-    height: 370px;
-    margin-top: 32px;
-    background-color: #fff;
-}
-.description-content {
-    padding: 0px;
-    width: fit-content;
-}
-
-.mainDash {
-    overflow: hidden;
-    grid-area: mainDash;
-    box-shadow: 2px 2px 20px #000;
-    padding: 10px;
-}
-
 @media only screen and (max-width: 600px) {
-    .container {
-        display: grid;
-        grid-gap: 1%;
-        grid-template-areas: "sideDash" "mainDash";
-        grid-template-rows: 1fr 2fr;
-        grid-template-columns: 1fr;
-    }
-    .description-content {
-        padding: 0px;
-    }
-    #logo {
-        margin-left: 0;
-    }
-    .col-xs-9 {
-        padding-left: 0px;
-    }
-    #imageNav-area {
-        margin-top: 0px;
-    }
-    .sideDash {
-        overflow: scroll;
-    }
-    .sideDash::-webkit-scrollbar {
-        display: none;
-    }
-    .mainDash {
-        padding: 10px;
-    }
-    .dataDiv {
-        overflow: auto;
+    .main {
+        width: 80%;
+        margin: 0 auto;
     }
 }
