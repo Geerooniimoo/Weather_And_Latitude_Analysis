@@ -1,7 +1,3 @@
-* {
-    /* border: 2px solid red; */
-}
-
 html {
     position: relative;
     min-height: 100%;
@@ -23,6 +19,7 @@ nav {
     background-color: #05415d;
     border: none;
     box-shadow: 2px 2px 10px #000;
+    position: relative;
 
 }
 
@@ -45,18 +42,18 @@ nav button {
     border: none;
 }
 
-nav div {
-    display: flex;
+#plotsDiv {
+    color: white;
 }
 
-nav div a {
+#plotsDiv a {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
     margin: 0 10px;
 }
 
-#plots div {
+#plotsDiv div {
     top: 60px;
     right: 150px;
     background: #05415d;
@@ -70,8 +67,7 @@ nav div a {
     opacity: .85;
 }
 
-#plots>button:focus+div, #plots div:hover {
-    display: block;
+#plotsBtn:focus+#plots, #plotsDiv div:hover {
     -webkit-transition: transform .25s linear;
     -moz-transition: transform .25s linear;
     -ms-transition: transform .25s linear;
@@ -79,6 +75,66 @@ nav div a {
     transition: transform .25s linear;
     transform: scale(1);
 }
+
+#plotsDiv2 {
+    opacity: .85;
+    padding: 10px;
+    display: flex;
+    border-radius: 8px;
+    background: teal;
+    width: fit-content;
+    transform: scale(0);
+    flex-direction: column;
+    border: 4px solid #000;
+    transition: transform .25s linear;
+    -o-transition: transform .25s linear;
+    -ms-transition: transform .25s linear;
+    -moz-transition: transform .25s linear;
+    -webkit-transition: transform .25s linear;
+}
+
+#plotsDiv2 a {
+color: white;
+text-decoration: none;
+margin: 5px auto 5px 5px;
+}
+
+#mobileView {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 32px;
+}
+
+#btn {
+    right: 0px;
+    width: 40px;
+    opacity: .65;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    border-radius: 5px;
+    border: 2px solid white;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    background: rgb(3, 109, 51);
+    box-shadow: 2px 2px 1px silver;
+    transition: transform .25s linear;
+    -o-transition: transform .25s linear;
+    -ms-transition: transform .25s linear;
+    -moz-transition: transform .25s linear;
+    filter: drop-shadow(1px 1px 1px black);
+    -webkit-transition: transform .25s linear;
+}
+
+#btn hr {
+    width: 65%;
+    height: 1px;
+    background: white;
+    margin: 0 auto;
+}
+
 
 table {
     margin: 0 auto;
@@ -105,7 +161,7 @@ main {
 
 #mainDash {
     width: 55%;
-    padding: 20px;
+    padding: 10px;
     margin-top: 32px;
     background-color: #fff;
     box-shadow: 2px 2px 20px #000;
@@ -121,7 +177,7 @@ main {
 }
 
 #mainDash>p {
-    padding-top: 20px;
+    padding-top: 10px;
     /* font-size: 16px; */
     line-height: 30px;
     color: slategray;
@@ -237,5 +293,236 @@ thead {
 
     p {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:1200px) and (max-height:1500px) {
+    nav a, nav button, #plotsDiv a {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 5px;
+    }
+
+    #mainDash {
+        width: 55%;
+    }
+
+    #mainDash img {
+        width: 65%;
+    }
+
+    #mainDash>p {
+        padding-top: 0px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    #sideDash {
+        width: 30%;
+    }
+
+    #sideDash a {
+        width: 46%;
+    }
+
+
+    table {
+        font-size: .5rem;
+    }
+
+    footer h6 {
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:1200px) and (max-height:900px) {
+    nav a, nav button, #plotsDiv a {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.2rem !important;
+        margin-bottom: 5px;
+    }
+
+    #mainDash img {
+        width: 50%;
+    }
+
+    #mainDash>p {
+        padding-top: 0px;
+        font-size: .5rem;
+        line-height: 1.5;
+    }
+
+    #sideDash {
+        width: 30%;
+    }
+
+    #sideDash a {
+        width: 44%;
+    }
+
+
+    table {
+        font-size: .5rem;
+    }
+
+    footer h6 {
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:500px) and (max-height:1000px) {
+    nav a, nav button, #plotsDiv a {
+        font-size: .85rem;
+    }
+
+    h1 {
+        font-size: .85rem !important;
+        margin-bottom: 5px;
+    }
+
+    #mainDash img {
+        width: 75%;
+    }
+
+    #mainDash>p {
+        padding-top: 0px;
+        font-size: .5rem;
+        line-height: 1.5;
+    }
+
+    #sideDash {
+        width: 25%;
+    }
+
+    #sideDash h1 {
+        font-size: 2.8vw !important;
+    }
+
+    #images {
+        width: 100%;
+    }
+
+    #sideDash a {
+        width: 41%;
+    }
+
+    .dataDiv {
+        width: 100%;
+    }
+
+    table {
+        font-size: .5rem;
+    }
+
+    footer h6 {
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:400px) and (max-height:851px) {
+
+    nav {
+        position: relative;
+        display: block;
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav>div {
+        position: absolute;
+        top: 75px;
+        right: 10px;
+        padding: 5px;
+        width: 100px;
+        border-radius: 8px;
+        border: 2px solid #000;
+        background: teal;
+        flex-direction: column;
+        align-items: flex-start;
+        opacity: .85;
+    }
+
+    #mobileView {
+        display: block;
+    }
+
+    nav a, nav button, #plotsDiv a {
+        font-size: .85rem;
+        margin: 5px;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    nav>a {
+        display: block;
+        width: 100%;
+        margin-top: 0;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    #plotsDiv {
+        transform: scale(0);
+    }
+
+    h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: .65rem !important;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #mainDash {
+        width: 90%;
+        margin: 35px auto;
+    }
+
+    #mainDash img {
+        width: 75%;
+    }
+
+    #mainDash>p {
+        padding-top: 0px;
+        font-size: .5rem;
+        line-height: 1.5;
+    }
+
+    #sideDash {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #sideDash h1 {
+        font-size: .85rem !important;
+    }
+
+    #sideDash a {
+        width: 45%;
+    }
+
+    .dataDiv {
+        width: 90%;
+    }
+
+    table {
+        font-size: .2rem;
+    }
+
+    footer h6 {
+        margin: 5px;
     }
 }

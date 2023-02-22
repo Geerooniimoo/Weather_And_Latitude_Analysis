@@ -12,18 +12,35 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light p-0">
         <a href="#">LATITUDE</a>
-        <div id="plots">
-                <button>Plots &#x25BC;</button>
-                <div>
-                    <li><a class="dropdown-item" href="./visualizations/temp.html">Max Temperature</a></li>
-                    <li><a class="dropdown-item" href="./visualizations/humidity.html">Humidity</a></li>
-                    <li><a class="dropdown-item" href="./visualizations/cloudiness.html">Cloudiness</a></li>
-                    <li><a class="dropdown-item" href="./visualizations/wind.html">Wind Speed</a></li>
-                </div>
-            <a class="nav-link active text-white" href="./visualizations/comparison.html">Comparison</a>
-            <a class="nav-link active text-white" href="./visualizations/data.html">Data</a>
+        <div id="plotsDiv">
+            <button id="plotsBtn">Plots &#x25BC;</button>
+            <div id="plots">
+                <li><a href="./visualizations/temp.html">Max Temperature</a></li>
+                <li><a href="./visualizations/humidity.html">Humidity</a></li>
+                <li><a href="./visualizations/cloudiness.html">Cloudiness</a></li>
+                <li><a href="./visualizations/wind.html">Wind Speed</a></li>
+            </div>
+            <a href="./visualizations/comparison.html">Comparison</a>
+            <a href="./visualizations/data.html">Data</a>
         </div>
     </nav>
+
+    <div id="mobileView">
+        <button id="btn">
+            <hr class="hr">
+            <hr class="hr">
+            <hr class="hr">
+        </button>
+        <div id="plotsDiv2">
+            <a href="./index.html">Home</a>
+            <a href="./visualizations/temp.html">Max Temperature</a>
+            <a href="./visualizations/humidity.html">Humidity</a>
+            <a href="./visualizations/cloudiness.html">Cloudiness</a>
+            <a href="./visualizations/wind.html">Wind Speed</a>
+            <a href="./visualizations/comparison.html">Comparison</a>
+            <a href="./visualizations/data.html">Data</a>
+        </div>
+    </div>
 
     <main id="main">
         <session id="mainDash">
@@ -36,17 +53,22 @@
             <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
                 latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This
                 site provides the source data and visualizations created as part of the analysis, as well as
-                explanations and descriptions of any trends and correlations witnessed.  You can click on any of the visualizations to get more details.</p>
+                explanations and descriptions of any trends and correlations witnessed. You can click on any of the
+                visualizations to get more details.</p>
         </session>
         <session id="sideDash">
-                <h1 class="imageNav-header">Visualizations</h1>
-                <hr>
-                <div id="images">
-                    <a href="./visualizations/temp.html"><img src="./assets/images/Fig1.png" alt="Latitude vs. Max Temperature"></a>
-                    <a href="./visualizations/humidity.html"><img src="./assets/images/Fig2.png" alt="Lalitude vs. Humidity"></a>
-                    <a href="./visualizations/cloudiness.html"><img src="./assets/images/Fig3.png" alt="Latitude vs. Couldiness"></a>
-                    <a href="./visualizations/wind.html"><img src="./assets/images/Fig4.png" alt="Latitude vs. Wind Speed"></a>
-                </div>
+            <h1>Visualizations</h1>
+            <hr>
+            <div id="images">
+                <a href="./visualizations/temp.html"><img src="./assets/images/Fig1.png"
+                        alt="Latitude vs. Max Temperature"></a>
+                <a href="./visualizations/humidity.html"><img src="./assets/images/Fig2.png"
+                        alt="Lalitude vs. Humidity"></a>
+                <a href="./visualizations/cloudiness.html"><img src="./assets/images/Fig3.png"
+                        alt="Latitude vs. Couldiness"></a>
+                <a href="./visualizations/wind.html"><img src="./assets/images/Fig4.png"
+                        alt="Latitude vs. Wind Speed"></a>
+            </div>
         </session>
     </main>
 
@@ -54,6 +76,20 @@
         style="position: fixed;bottom: 0;background-color: rgb(110, 109, 109);width: 100%;border-top: 5px solid rgb(107, 166, 221);text-align: center;">
         <h6>Geronimo "(▪_▪)" 201910</h6>
     </footer>
+
+    <script>
+        btn.onclick = () => {
+            plotsDiv2.style = 'transform: scale(1)';
+            btn.style = 'transform: scale(0)';
+        }
+
+        document.onclick = ({ target }) => {
+            
+            if ([plotsDiv2, btn].includes(target) || target.nodeName == 'HR') return;
+            plotsDiv2.style = 'transform: scale(0)';
+            btn.style = 'transform: scale(1)';
+        }
+    </script>
 
 </body>
 
